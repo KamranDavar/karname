@@ -1,5 +1,5 @@
 import { List } from "antd";
-import { QuestionListItem } from "../components/questionListItem";
+import { QuestionListItem } from "../components/QuestionListItem";
 
 export function QuestionList() {
   return (
