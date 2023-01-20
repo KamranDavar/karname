@@ -38,12 +38,24 @@ export const jsonServerApi = createApi({
       }),
       invalidatesTags: ["Question", "Questions"],
     }),
-    updateAnswer: builder.mutation({
-      query: (id, body) => ({
+    likeAnswer: builder.mutation({
+      query: ({id, likes}) => ({
         url: `answers/${id}`,
         method: "PATCH",
-        body,
+        body:{likes},
       }),
+      invalidatesTags: ["Question"],
+    }),
+    dislikeAnswer: builder.mutation({
+      query: ({id, dislikes}) => {
+        console.log("id", id);
+        console.log("dislikes", dislikes);
+        return {
+          url: `answers/${id}`,
+          method: "PATCH",
+          body:{dislikes},
+        };
+      },
       invalidatesTags: ["Question"],
     }),
   }),
@@ -56,5 +68,6 @@ export const {
   useCreateQuestionMutation,
   useDeleteQuestionMutation,
   useCreateAnswerMutation,
-  useUpdateAnswerMutation,
+  useLikeAnswerMutation,
+  useDislikeAnswerMutation,
 } = jsonServerApi;

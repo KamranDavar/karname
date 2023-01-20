@@ -64,8 +64,8 @@
     {
       "id": 1,
       "body": "some explanation",
-      "likes": 7,
-      "dislikes": 2,
+      "likes": 9,
+      "dislikes": 5,
       "userId": 2,
       "questionId": 1,
       "createdAt": 1674148845892
@@ -91,8 +91,8 @@
       "createdAt": 1674246149227,
       "userId": 1,
       "questionId": 1,
-      "likes": 0,
-      "dislikes": 0,
+      "likes": 4,
+      "dislikes": 4,
       "id": 4
     },
     {
