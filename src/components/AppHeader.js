@@ -82,7 +82,7 @@ export function AppHeader() {
         onCancel={handleCancel}
         footer={null}
       >
-        <QuestionForm />
+        <QuestionForm closeModal={handleCancel} />
       </Modal>
     </Header>
   );

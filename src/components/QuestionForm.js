@@ -1,15 +1,31 @@
 import { Button, Col, Form, Input, Row } from "antd";
-import { useCreateQuestionMutation } from "../store/services/jsonServerApi";
+import { useEffect } from "react";
+import { useGetUserById } from "../hooks/getUser";
+import {
+  useCreateQuestionMutation,
+  useGetUsersQuery,
+} from "../store/services/jsonServerApi";
 
-export function QuestionForm() {
-  const [createQuestion, { isLoading }] = useCreateQuestionMutation();
+export function QuestionForm({ closeModal }) {
+  const [createQuestion, { isLoading, isSuccess }] =
+    useCreateQuestionMutation();
 
   const [form] = Form.useForm();
+  const { data: users } = useGetUsersQuery();
+  const user = useGetUserById(1, users);
+  console.log("user", user);
   const onFinish = (values) => {
     console.log("values", values);
     values.createdAt = Date.now();
+    values.userId = user.id;
     createQuestion(values);
   };
+  useEffect(() => {
+    if (isSuccess) {
+      form.resetFields();
+      closeModal();
+    }
+  }, [isSuccess]);
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -28,12 +44,12 @@ export function QuestionForm() {
       >
         <Row className="question-form" justify="center">
           <Col xs={24}>
-            <Form.Item name="question">
+            <Form.Item name="title">
               <Input placeholder="type title" />
             </Form.Item>
           </Col>
           <Col xs={24}>
-            <Form.Item name="desc">
+            <Form.Item name="description">
               <TextArea rows={4} placeholder="type question" />
             </Form.Item>
           </Col>

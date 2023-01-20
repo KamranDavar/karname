@@ -3,7 +3,6 @@ import React from "react";
 import { useGetUserById } from "../hooks/getUser";
 
 export default function Detail({data, users}) {
-  console.log("data", data)
   const user = useGetUserById(data?.userId, users);
 
   return (
