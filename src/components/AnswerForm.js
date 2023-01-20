@@ -5,7 +5,7 @@ import { useCreateAnswerMutation } from "../store/services/jsonServerApi";
 import { useGetUserById } from "../hooks/getUser";
 
 export default function AnswerForm({ users }) {
-  const [createAnswer, {isLoading, isSuccess }] = useCreateAnswerMutation();
+  const [createAnswer, { isLoading, isSuccess }] = useCreateAnswerMutation();
   const { id } = useParams();
   const user = useGetUserById(1, users);
 
@@ -32,7 +32,7 @@ export default function AnswerForm({ users }) {
 
   return (
     <div>
-      <h2>Submit your answer</h2>
+      <h2> پاسخ خود را ثبت کنید</h2>
       <Form
         form={form}
         name="basic"
@@ -43,13 +43,13 @@ export default function AnswerForm({ users }) {
         <Row className="question-form" justify="center">
           <Col xs={24}>
             <Form.Item name="body">
-              <TextArea rows={4} placeholder="type answer" />
+              <TextArea rows={4} placeholder="متن پاسخ" />
             </Form.Item>
           </Col>
           <Row justify="end" className="width-100">
             <Form.Item>
               <Button type="primary" htmlType="submit" loading={isLoading}>
-                Submit
+                ارسال پاسخ
               </Button>
             </Form.Item>
           </Row>

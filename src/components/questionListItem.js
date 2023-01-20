@@ -1,4 +1,4 @@
-import { Avatar, Button, Card, Row, Space } from "antd";
+import { Avatar, Button, Card, Divider, Row, Space } from "antd";
 import { Link } from "react-router-dom";
 import { MessageOutlined } from "@ant-design/icons";
 import { useGetUserById } from "../hooks/getUser";
@@ -15,18 +15,29 @@ export function QuestionListItem({ item, users }) {
           </>
         }
         extra={
-          <Space>
-            time:<b> {new Date(item.createdAt).toLocaleTimeString("en-US")}</b>{" "}
-            | data:{" "}
-            <b> {new Date(item.createdAt).toLocaleDateString("en-US")}</b>{" "}
+          <>
+            <Space className="time-date">
+              <span>
+                ساعت:
+                <b>
+                  {" "}
+                  {new Date(item.createdAt).toLocaleTimeString("fa-IR")}
+                </b>{" "}
+              </span>
+              <Divider type="vertical" />
+              <span>
+                تاریخ:{" "}
+                <b> {new Date(item.createdAt).toLocaleDateString("fa-IR")}</b>{" "}
+              </span>
+            </Space>
             <MessageOutlined /> {item?.answers?.length}
-          </Space>
+          </>
         }
       >
         {item.description}
         <Row justify="end" className="width-100">
           <Link to={`/${item.id}`}>
-            <Button>Detail</Button>
+            <Button>مشاهده جزییات</Button>
           </Link>
         </Row>
       </Card>

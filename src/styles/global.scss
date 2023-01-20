@@ -1,6 +1,11 @@
+$primary-color: #27AE60;
 .width-100{
   width: 100%;
 }
 .ant-card{
   margin-bottom: 1vh;
+}
+.ant-btn-default{
+  border-color: $primary-color;
+  color:  $primary-color;
 }

@@ -1,11 +1,6 @@
-import { Avatar, Button, Card, Row, Space } from "antd";
+import { Avatar, Button, Card, Divider, Row, Space } from "antd";
 import React from "react";
-import {
-  SmileOutlined,
-  FrownOutlined,
-  LikeOutlined,
-  DislikeOutlined,
-} from "@ant-design/icons";
+import { SmileOutlined, FrownOutlined } from "@ant-design/icons";
 import { useGetUserById } from "../hooks/getUser";
 import {
   useDislikeAnswerMutation,
@@ -14,12 +9,9 @@ import {
 
 export default function AnswerListItem({ item, users }) {
   const user = useGetUserById(item.userId, users);
-  const [likeAnswer, { isLoading: isLikeLoading, isSuccess: isLikeSuccess }] =
-    useLikeAnswerMutation();
-  const [
-    dislikeAnswer,
-    { isLoading: isDislikeLoading, isSuccess: isDislikeSuccess },
-  ] = useDislikeAnswerMutation();
+  const [likeAnswer, { isLoading: isLikeLoading }] = useLikeAnswerMutation();
+  const [dislikeAnswer, { isLoading: isDislikeLoading }] =
+    useDislikeAnswerMutation();
 
   const onLikeClick = () => {
     likeAnswer({ likes: item.likes + 1, id: item.id });
@@ -38,26 +30,40 @@ export default function AnswerListItem({ item, users }) {
           </>
         }
         extra={
-          <Space>
-            time: {new Date(item.createdAt).toLocaleTimeString("en-US")} | time:{" "}
-            {new Date(item.createdAt).toLocaleDateString("en-US")}
-            <div>
-              <SmileOutlined /> {item.likes}
-            </div>
-            <div>
-              <FrownOutlined /> {item.dislikes}
-            </div>
-          </Space>
+          <>
+            <Space className="time-date">
+              <span>
+                ساعت:
+                <b>{new Date(item.createdAt).toLocaleTimeString("fa-IR")}</b>
+              </span>
+              <Divider type="vertical" />
+              <span>
+                تاریخ:
+                <b>
+                  {" "}
+                  {new Date(item.createdAt).toLocaleDateString("fa-IR")}
+                </b>{" "}
+              </span>
+            </Space>
+            <Space>
+              <div>
+                <SmileOutlined /> {item.likes}
+              </div>
+              <div>
+                <FrownOutlined /> {item.dislikes}
+              </div>
+            </Space>
+          </>
         }
       >
         {item?.body}
         <Row justify="end" className="width-100">
           <Space>
             <Button onClick={onLikeClick} loading={isLikeLoading}>
-              <LikeOutlined />
+              <SmileOutlined /> پاسخ خوب بود
             </Button>
-            <Button onClick={onDislikeClick} loading={isDislikeLoading}>
-              <DislikeOutlined />
+            <Button onClick={onDislikeClick} loading={isDislikeLoading} danger>
+              <FrownOutlined /> پاسخ خوب نبود
             </Button>
           </Space>
         </Row>

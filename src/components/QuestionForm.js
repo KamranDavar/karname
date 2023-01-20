@@ -43,18 +43,18 @@ export function QuestionForm({ closeModal }) {
         <Row className="question-form" justify="center">
           <Col xs={24}>
             <Form.Item name="title">
-              <Input placeholder="type title" />
+              <Input placeholder="عنوان سوال  را بنویسید" />
             </Form.Item>
           </Col>
           <Col xs={24}>
             <Form.Item name="description">
-              <TextArea rows={4} placeholder="type question" />
+              <TextArea rows={4} placeholder="متن سوال  را بنویسید" />
             </Form.Item>
           </Col>
           <Row justify="end" className="width-100">
             <Form.Item>
               <Button type="primary" htmlType="submit" loading={isLoading}>
-                Submit
+                ایجاد سوال
               </Button>
             </Form.Item>
           </Row>

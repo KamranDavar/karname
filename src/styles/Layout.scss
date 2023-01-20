@@ -1,11 +1,19 @@
 .layout-container {
   .ant-layout {
-    height: 100vh;
+    min-height: 100vh;
   }
-  .content{
+  .content {
     padding: 1vw 5vw;
   }
-  .ant-layout-header{
-    padding-inline: 5vw ; 
+  .ant-layout-header {
+    padding-inline: 5vw;
+  }
+  .ant-card {
+    .ant-card-head {
+      background-color: white;
+    }
+    .ant-card-body {
+      background-color: rgba(0, 0, 0, 0.02);
+    }
   }
 }

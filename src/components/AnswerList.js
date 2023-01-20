@@ -8,7 +8,7 @@ const {data:users}= useGetUsersQuery()
 
   return (
     <div><List
-    header={<h2>Answers</h2>}
+    header={<h2>پاسخ ها</h2>}
     itemLayout="horizontal"
     dataSource={items}
     renderItem={(item) => <AnswerListItem item={item} users={users} />}

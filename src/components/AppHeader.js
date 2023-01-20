@@ -52,12 +52,12 @@ export function AppHeader() {
     >
       <Row>
         <Col flex="auto" className="title">
-          <h1>{pathname === "/" ? "Question  List" : "Question Detail"}</h1>
+          <h1>{pathname === "/" ? "لیست سوالات" : "جزییات سوال"}</h1>
         </Col>
         <Col className="account">
           <Space>
             <Button type="primary" icon={<PlusOutlined />} onClick={showModal}>
-              new question
+               سوال جدید
             </Button>
             <Avatar src={user?.avatar} />
             <Dropdown
@@ -76,7 +76,7 @@ export function AppHeader() {
         </Col>
       </Row>
       <Modal
-        title="Create New Question"
+        title="ایجاد سوال جدید"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
