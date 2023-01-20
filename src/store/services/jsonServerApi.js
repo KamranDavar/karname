@@ -36,7 +36,7 @@ export const jsonServerApi = createApi({
         method: "POST",
         body,
       }),
-      invalidatesTags: ["Question"],
+      invalidatesTags: ["Question", "Questions"],
     }),
     updateAnswer: builder.mutation({
       query: (id, body) => ({

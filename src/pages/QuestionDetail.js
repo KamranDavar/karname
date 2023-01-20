@@ -17,7 +17,7 @@ export function QuestionDetail() {
     <>
       <Detail data={data} users={users} />
       <AnswerList items={data?.answers} />
-      <AnswerForm />
+      <AnswerForm users={users} />
     </>
   );
 }

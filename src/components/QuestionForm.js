@@ -13,9 +13,7 @@ export function QuestionForm({ closeModal }) {
   const [form] = Form.useForm();
   const { data: users } = useGetUsersQuery();
   const user = useGetUserById(1, users);
-  console.log("user", user);
   const onFinish = (values) => {
-    console.log("values", values);
     values.createdAt = Date.now();
     values.userId = user.id;
     createQuestion(values);
@@ -55,7 +53,7 @@ export function QuestionForm({ closeModal }) {
           </Col>
           <Row justify="end" className="width-100">
             <Form.Item>
-              <Button type="primary" htmlType="submit">
+              <Button type="primary" htmlType="submit" loading={isLoading}>
                 Submit
               </Button>
             </Form.Item>

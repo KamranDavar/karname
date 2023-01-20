@@ -69,6 +69,57 @@
       "userId": 2,
       "questionId": 1,
       "createdAt": 1674148845892
+    },
+    {
+      "body": "test answer",
+      "createdAt": 1674245550176,
+      "userId": 1,
+      "questionId": "1",
+      "id": 2
+    },
+    {
+      "body": "test answer",
+      "createdAt": 1674245602746,
+      "userId": 1,
+      "questionId": "1",
+      "likes": 0,
+      "dislikes": 0,
+      "id": 3
+    },
+    {
+      "body": "hhhhhhhhhhhhhh",
+      "createdAt": 1674246149227,
+      "userId": 1,
+      "questionId": 1,
+      "likes": 0,
+      "dislikes": 0,
+      "id": 4
+    },
+    {
+      "body": "ooooooooooo",
+      "createdAt": 1674246234859,
+      "userId": 1,
+      "questionId": 1,
+      "likes": 0,
+      "dislikes": 0,
+      "id": 5
+    },
+    {
+      "createdAt": 1674246251321,
+      "userId": 1,
+      "questionId": 1,
+      "likes": 0,
+      "dislikes": 0,
+      "id": 6
+    },
+    {
+      "body": "kkkkkk",
+      "createdAt": 1674246296434,
+      "userId": 1,
+      "questionId": 1,
+      "likes": 0,
+      "dislikes": 0,
+      "id": 7
     }
   ]
 }
