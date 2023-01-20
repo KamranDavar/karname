@@ -20,7 +20,7 @@ const data = {
     {
       image: "https://randomuser.me/api/portraits/thumb/men/45.jpg",
       title: "Ant Design Title 1",
-      desc: "Ant Design, a design language for background applications, is refined by Ant UED Team?",
+      desc: "Ant Design, a design language for background applications, is refined by Ant UED Team?Ant Design, a design language for background applications, is refined by Ant UED Team?Ant Design, a design language for background applications, is refined by Ant UED Team?Ant Design, a design language for background applications, is refined by Ant UED Team?",
       id: "1",
     },
     {

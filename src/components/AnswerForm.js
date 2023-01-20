@@ -12,6 +12,9 @@ export default function AnswerForm() {
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
+
+  const { TextArea } = Input;
+
   return (
     <div>
       <h2>Submit your answer</h2>
@@ -23,18 +26,18 @@ export default function AnswerForm() {
         autoComplete="off"
       >
         <Row className="question-form" justify="center">
-          <Col xs={18} md={20} lg={22}>
+          <Col xs={24} >
             <Form.Item name="question">
-              <Input placeholder="type question" />
+              <TextArea rows={4} placeholder="type answer" />
             </Form.Item>
           </Col>
-          <Col xs={6} md={4} lg={2}>
+          <Row justify="end" className="width-100">
             <Form.Item>
               <Button type="primary" htmlType="submit">
                 Submit
               </Button>
             </Form.Item>
-          </Col>
+          </Row>
         </Row>
       </Form>
     </div>
