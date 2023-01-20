@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "kamran",
+      "avatar": "kamran.jpg"
+    },
+    {
+      "id": 2,
+      "name": "john",
+      "avatar": "john.jpg"
+    },
+    {
+      "id": 3,
+      "name": "hamid",
+      "avatar": "hamid.jpg"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "title": "Scatter plot with linear regression?",
+      "description": "I need to graph a scatter plot with a linear regression line. (t vs B or t vs dB). My data posts but not my needed graphs. Please help lol",
+      "userId": 1,
+      "createdAt": 1674148593494
+    },
+    {
+      "title": "some subject?",
+      "description": "some description about the question",
+      "userId": 1,
+      "createdAt": 1674148593494,
+      "id": 2
+    }
+  ],
+  "answers": [
+    {
+      "id": 1,
+      "body": "some explanation",
+      "likes": 7,
+      "dislikes": 2,
+      "userId": 2,
+      "questionId": 1,
+      "createdAt": 1674148845892
+    }
+  ]
+}
