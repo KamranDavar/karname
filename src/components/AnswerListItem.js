@@ -6,16 +6,17 @@ import {
   LikeOutlined,
   DislikeOutlined,
 } from "@ant-design/icons";
+import { useGetUserById } from "../hooks/getUser";
 
 export default function AnswerListItem({ item, users }) {
-  const user = users?.find((user) => user.id === item.userId);
+  const user = useGetUserById(item.userId, users);
   return (
     <div>
       <Card
         type="inner"
         title={
           <>
-            <Avatar shape="square" src={item?.image} /> {user?.name}
+            <Avatar shape="square" src={user?.avatar} /> {user?.name}
           </>
         }
         extra={

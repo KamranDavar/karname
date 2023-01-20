@@ -13,6 +13,8 @@ import {
 } from "antd";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useGetUserById } from "../hooks/getUser";
+import { useGetUsersQuery } from "../store/services/jsonServerApi";
 import { QuestionForm } from "./QuestionForm";
 
 const { Header } = Layout;
@@ -20,6 +22,10 @@ const { Header } = Layout;
 export function AppHeader() {
   let { pathname } = useLocation();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { data: users } = useGetUsersQuery();
+
+  const user = useGetUserById(1, users);
+
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -53,7 +59,7 @@ export function AppHeader() {
             <Button type="primary" icon={<PlusOutlined />} onClick={showModal}>
               new question
             </Button>
-            <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+            <Avatar src={user?.avatar} />
             <Dropdown
               menu={{
                 items,
@@ -61,7 +67,7 @@ export function AppHeader() {
             >
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
-                  Hover me
+                 {user?.name}
                   <DownOutlined />
                 </Space>
               </a>

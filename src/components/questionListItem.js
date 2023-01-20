@@ -1,16 +1,17 @@
 import { Avatar, Button, Card, Row, Space } from "antd";
 import { Link } from "react-router-dom";
 import { MessageOutlined } from "@ant-design/icons";
+import { useGetUserById } from "../hooks/getUser";
 
-export function QuestionListItem({ item }) {
-  console.log("item", item)
+export function QuestionListItem({ item, users }) {
+  const user = useGetUserById(item.userId, users);
   return (
     <>
       <Card
         type="inner"
         title={
           <>
-            <Avatar shape="square" src={item.image} /> {item.title}
+            <Avatar shape="square" src={user?.avatar} /> {item?.title}
           </>
         }
         extra={

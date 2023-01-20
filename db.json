@@ -3,17 +3,17 @@
     {
       "id": 1,
       "name": "kamran",
-      "avatar": "kamran.jpg"
+      "avatar": "https://randomuser.me/api/portraits/thumb/men/75.jpg"
     },
     {
       "id": 2,
       "name": "john",
-      "avatar": "john.jpg"
+      "avatar": "https://randomuser.me/api/portraits/thumb/men/74.jpg"
     },
     {
       "id": 3,
       "name": "hamid",
-      "avatar": "hamid.jpg"
+      "avatar": "https://randomuser.me/api/portraits/thumb/men/73.jpg"
     }
   ],
   "questions": [
