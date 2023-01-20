@@ -1,9 +1,14 @@
 import { Button, Col, Form, Input, Row } from "antd";
+import { useCreateQuestionMutation } from "../store/services/jsonServerApi";
 
 export function QuestionForm() {
+  const [createQuestion, { isLoading }] = useCreateQuestionMutation();
+
   const [form] = Form.useForm();
   const onFinish = (values) => {
     console.log("values", values);
+    values.createdAt = Date.now();
+    createQuestion(values);
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -11,7 +16,6 @@ export function QuestionForm() {
   };
 
   const { TextArea } = Input;
-
 
   return (
     <>

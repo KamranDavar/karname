@@ -1,8 +1,9 @@
-import { Avatar, Button, Card, List, Row, Space } from "antd";
+import { Avatar, Button, Card, Row, Space } from "antd";
 import { Link } from "react-router-dom";
 import { MessageOutlined } from "@ant-design/icons";
 
 export function QuestionListItem({ item }) {
+  console.log("item", item)
   return (
     <>
       <Card
@@ -14,11 +15,14 @@ export function QuestionListItem({ item }) {
         }
         extra={
           <Space>
-            time:<b>17:00</b> | data: <b>01/01/2022</b> <MessageOutlined />3
+            time:<b> {new Date(item.createdAt).toLocaleTimeString("en-US")}</b>{" "}
+            | data:{" "}
+            <b> {new Date(item.createdAt).toLocaleDateString("en-US")}</b>{" "}
+            <MessageOutlined /> {item?.answers?.length}
           </Space>
         }
       >
-        {item.desc}
+        {item.description}
         <Row justify="end" className="width-100">
           <Link to={`/${item.id}`}>
             <Button>Detail</Button>

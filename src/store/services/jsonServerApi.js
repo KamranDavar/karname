@@ -5,8 +5,11 @@ export const jsonServerApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000/" }),
   endpoints: (builder) => ({
     getQuestions: builder.query({
-      query: () => `questions`,
+      query: () => `questions?_embed=answers&_expand=user`,
       providesTags: ["Questions"],
+    }),
+    getUsers: builder.query({
+      query: () => `users?_embed=questions`,
     }),
     getQuestion: builder.query({
       query: (id) => `questions/${id}/?_embed=answers&_expand=user`,
@@ -48,6 +51,7 @@ export const jsonServerApi = createApi({
 
 export const {
   useGetQuestionsQuery,
+  useGetUsersQuery,
   useGetQuestionQuery,
   useCreateQuestionMutation,
   useDeleteQuestionMutation,

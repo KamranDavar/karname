@@ -46,7 +46,7 @@ export function AppHeader() {
     >
       <Row>
         <Col flex="auto" className="title">
-          <h1>{pathname === "/" ? "Question  List" : "Question De3tail"}</h1>
+          <h1>{pathname === "/" ? "Question  List" : "Question Detail"}</h1>
         </Col>
         <Col className="account">
           <Space>

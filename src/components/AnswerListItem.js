@@ -7,29 +7,31 @@ import {
   DislikeOutlined,
 } from "@ant-design/icons";
 
-export default function AnswerListItem({ item }) {
+export default function AnswerListItem({ item, users }) {
+  const user = users?.find((user) => user.id === item.userId);
   return (
     <div>
       <Card
         type="inner"
         title={
           <>
-            <Avatar shape="square" src={item.image} /> {item.title}
+            <Avatar shape="square" src={item?.image} /> {user?.name}
           </>
         }
         extra={
           <Space>
-            time:17:00 | time: 01/01/2022
+            time: {new Date(item.createdAt).toLocaleTimeString("en-US")} | time:{" "}
+            {new Date(item.createdAt).toLocaleDateString("en-US")}
             <div>
-              <SmileOutlined /> 10
+              <SmileOutlined /> {item.likes}
             </div>
             <div>
-              <FrownOutlined /> 5
+              <FrownOutlined /> {item.dislikes}
             </div>
           </Space>
         }
       >
-        {item.desc}
+        {item?.body}
         <Row justify="end" className="width-100">
           <Space>
             <Button>

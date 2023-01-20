@@ -1,8 +1,12 @@
+import { useParams } from "react-router-dom";
 import AnswerForm from "../components/AnswerForm";
 import AnswerList from "../components/AnswerList";
 import Detail from "../components/Detail";
+import { useGetQuestionQuery } from "../store/services/jsonServerApi";
 
 export function QuestionDetail() {
+  const {id}=useParams()
+  const { data } = useGetQuestionQuery(id);
   return (
     <>
       <Detail data={data} />
@@ -11,23 +15,3 @@ export function QuestionDetail() {
     </>
   );
 }
-const data = {
-  image: "https://randomuser.me/api/portraits/thumb/men/45.jpg",
-  title: "Ant Design Title 1",
-  desc: "Ant Design, a design language for background applications, is refined by Ant UED Team?",
-  id: "1",
-  answers: [
-    {
-      image: "https://randomuser.me/api/portraits/thumb/men/45.jpg",
-      title: "Ant Design Title 1",
-      desc: "Ant Design, a design language for background applications, is refined by Ant UED Team?Ant Design, a design language for background applications, is refined by Ant UED Team?Ant Design, a design language for background applications, is refined by Ant UED Team?Ant Design, a design language for background applications, is refined by Ant UED Team?",
-      id: "1",
-    },
-    {
-      image: "https://randomuser.me/api/portraits/thumb/men/45.jpg",
-      title: "Ant Design Title 2",
-      desc: "Ant Design, a design language for background applications, is refined by Ant UED Team?",
-      id: "2",
-    },
-  ],
-};

@@ -5,8 +5,8 @@ export default function Detail({data}) {
 
   return (
     <div>
-      <Card type="inner" title={data.title} extra={<a href="#">More</a>}>
-        {data.desc}
+      <Card type="inner" title={data?.title} extra={<a href="#">More</a>}>
+        {data?.description}
       </Card>
     </div>
   );

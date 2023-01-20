@@ -1,13 +1,15 @@
 import React from "react";
 import { Button, Col, Form, Input, Row } from "antd";
 import { useParams } from "react-router-dom";
+import { useCreateAnswerMutation } from "../store/services/jsonServerApi";
 
 export default function AnswerForm() {
+  const [createQuestion, { isLoading }] = useCreateAnswerMutation();
+  const { id } = useParams();
   const [form] = Form.useForm();
   const onFinish = (values) => {
     console.log("values", values);
   };
-
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -26,7 +28,7 @@ export default function AnswerForm() {
         autoComplete="off"
       >
         <Row className="question-form" justify="center">
-          <Col xs={24} >
+          <Col xs={24}>
             <Form.Item name="question">
               <TextArea rows={4} placeholder="type answer" />
             </Form.Item>
