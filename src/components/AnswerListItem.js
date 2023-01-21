@@ -7,7 +7,7 @@ import {
   useLikeAnswerMutation,
 } from "../store/services/jsonServerApi";
 
-export default function AnswerListItem({ item, users }) {
+export function AnswerListItem({ item, users }) {
   const user = useGetUserById(item.userId, users);
   const [likeAnswer, { isLoading: isLikeLoading }] = useLikeAnswerMutation();
   const [dislikeAnswer, { isLoading: isDislikeLoading }] =

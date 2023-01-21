@@ -2,7 +2,7 @@ import { Avatar, Card } from "antd";
 import React from "react";
 import { useGetUserById } from "../hooks/getUser";
 
-export default function Detail({ data, users }) {
+export function Detail({ data, users }) {
   const user = useGetUserById(data?.userId, users);
 
   return (

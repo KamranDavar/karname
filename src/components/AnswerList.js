@@ -1,9 +1,9 @@
 import { List } from 'antd'
 import React from 'react'
 import { useGetUsersQuery } from '../store/services/jsonServerApi'
-import AnswerListItem from './AnswerListItem'
+import {AnswerListItem} from './index'
 
-export default function AnswerList({items}) {
+export function AnswerList({items}) {
 const {data:users}= useGetUsersQuery()
 
   return (

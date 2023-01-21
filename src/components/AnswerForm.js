@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { useCreateAnswerMutation } from "../store/services/jsonServerApi";
 import { useGetUserById } from "../hooks/getUser";
 
-export default function AnswerForm({ users }) {
+export function AnswerForm({ users }) {
   const [createAnswer, { isLoading, isSuccess }] = useCreateAnswerMutation();
   const { id } = useParams();
   const user = useGetUserById(1, users);

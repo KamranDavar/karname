@@ -1,8 +1,7 @@
-import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import AnswerForm from "../components/AnswerForm";
-import AnswerList from "../components/AnswerList";
-import Detail from "../components/Detail";
+import {AnswerForm} from "../components";
+import {AnswerList} from "../components";
+import {Detail} from "../components";
 import {
   useGetQuestionQuery,
   useGetUsersQuery,
