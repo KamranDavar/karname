@@ -19,51 +19,23 @@
   "questions": [
     {
       "id": 1,
-      "title": "Scatter plot with linear regression?",
-      "description": "I need to graph a scatter plot with a linear regression line. (t vs B or t vs dB). My data posts but not my needed graphs. Please help lol",
-      "userId": 1,
+      "title": "دسته بندی براساس حرف اول",
+      "description": "سلام دوستان می خوام جدول دسته بندی ها رو براساس حرف اول اون کلمه مرتب سازی کنم ممنون میشم راه حلی معرفی کنید",
+      "userId": 2,
       "createdAt": 1674148593494
     },
     {
-      "title": "some subject?",
-      "description": "some description about the question",
-      "userId": 1,
+      "title": "راه اندازی وبسایت ارز دیجیتال با php",
+      "description": "عرض ادب و احترام ، دوستان من میخوام توی وبسایت فروش هات وچچر داشته باشم ، یعنی چطور کاربر بیاد هر چقدر هات ووچر که میخواد رو انتخاب کنه بعد منتقل شه به سبد خرید ملغش رو ریالی پرداخت کنه",
+      "userId": 3,
       "createdAt": 1674148593494,
       "id": 2
-    },
-    {
-      "title": "test title",
-      "description": "test description",
-      "createdAt": 1674243995388,
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "title": "test2",
-      "description": "test2",
-      "createdAt": 1674244527836,
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "title": "test3",
-      "description": "test4",
-      "createdAt": 1674244684411,
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "title": "test4",
-      "description": "test4",
-      "createdAt": 1674244764411,
-      "userId": 1,
-      "id": 6
     }
   ],
   "answers": [
     {
       "id": 1,
-      "body": "some explanation",
+      "body": "درود خوبی... وقتی از چیزی مطمئن نیستید, چرا پروژه را قبول کردید؟",
       "likes": 10,
       "dislikes": 6,
       "userId": 2,
@@ -71,23 +43,7 @@
       "createdAt": 1674148845892
     },
     {
-      "body": "test answer",
-      "createdAt": 1674245550176,
-      "userId": 1,
-      "questionId": "1",
-      "id": 2
-    },
-    {
-      "body": "test answer",
-      "createdAt": 1674245602746,
-      "userId": 1,
-      "questionId": "1",
-      "likes": 0,
-      "dislikes": 0,
-      "id": 3
-    },
-    {
-      "body": "hhhhhhhhhhhhhh",
+      "body": "درود . بهتره با لاراول پیاده سازی بشه . و واقعا نمیشه پیاده سازیش رو اینطوری توضیح داد .",
       "createdAt": 1674246149227,
       "userId": 1,
       "questionId": 1,
@@ -96,30 +52,13 @@
       "id": 4
     },
     {
-      "body": "ooooooooooo",
-      "createdAt": 1674246234859,
+      "body": "من توی php همچین چیزی رو پیاده سازی نکردم\nولی خب میدونم بهترین راه برای شما api Moralis هست",
+      "createdAt": 1674282415832,
       "userId": 1,
-      "questionId": 1,
+      "questionId": 2,
       "likes": 0,
       "dislikes": 0,
-      "id": 5
-    },
-    {
-      "createdAt": 1674246251321,
-      "userId": 1,
-      "questionId": 1,
-      "likes": 0,
-      "dislikes": 0,
-      "id": 6
-    },
-    {
-      "body": "kkkkkk",
-      "createdAt": 1674246296434,
-      "userId": 1,
-      "questionId": 1,
-      "likes": 0,
-      "dislikes": 0,
-      "id": 7
+      "id": 8
     }
   ]
 }
